@@ -1,13 +1,72 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.search-box {
+  border-radius: 999px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.search-box input {
+  width: 200px;
+  padding: 10px;
+  border-radius: 999px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+}
+
+.search-box.focused input {
+  background-color: rgb(143, 198, 228);
+}
+
+.App {
+  text-align: center;
+  background-image: url('./assets/clouds.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: 100vh;
+  padding: 25px;
+  margin: 1;
+}
+
+.location-box .location {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 3px 3px rgba(255, 255, 255, 0.5);
+}
+
+  .date {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  text-shadow: 2px 2px rgba(161, 72, 72, 0.5);
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .search-box input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .location-box .location {
+    font-size: 24px;
+  }
+
+  .date {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .search-box {
+    display: block;
+    text-align: center;
+  }
 }
